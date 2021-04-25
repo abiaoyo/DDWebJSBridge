@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+            <script language="javascript">
+                
+            var has_register_appjs = 0;
+            window.onload = function(){
+                window.webkit.messageHandlers.ddwebjs.postMessage({method:'ddwebjs_def_channel',callback:"ddwebjs_def_callback"});
+            }
+            function ddwebjs_def_callback(result){
+                has_register_appjs = result.success;
+                alert("has_register_appjs:"+has_register_appjs);
+            }
+            
+            //scan
+            function scanClick() {
+                window.webkit.messageHandlers.testFunc.postMessage({method:'scan',callback:"scan_callback"});
+            }
+            
+            function scan_callback(result){
+                alert("scan_callback:"+result);
+            }
+            
+            //share
+            function shareClick() {
+                window.webkit.messageHandlers.testFunc.postMessage({method:'share',callback:'share_callback',params:{title:'测试分享的标题',content:'测试分享的内容',url:'http://m.rblcmall.com/share/openShare.htm?share_uuid=shdfxdfdsfsdfs&share_url=http://m.rblcmall.com/store_index_32787.htm&imagePath=http://c.hiphotos.baidu.com/image/pic/item/f3d3572c11dfa9ec78e256df60d0f703908fc12e.jpg'}});
+            }
+            function share_callback(result){
+                document.getElementById("returnValue").value = result.suc+' '+result.msg;
+                alert('alert('+result.msg+')');
+            }
+            
+            //location
+            function locationClick() {
+                window.webkit.messageHandlers.testFunc.postMessage({method:'location',callback:"location_callback"});
+            }
+            function location_callback(result){
+                alert('alert(location:'+result+')');
+            }
+            
+            //color
+            function colorClick() {
+                window.webkit.messageHandlers.testFunc.postMessage({method:'color',params:{"color":[255,0,0,0.5]}});
+            }
+            
+            //pay
+            function payClick() {
+                window.webkit.messageHandlers.testFunc.postMessage({method:"pay",callback:"payResult", params:{order_no:'201511120981234',channel:'wx',amount:1,subject:'粉色外套'}});
+            }
+            function payResult(result) {
+                asyncAlert(result);
+            }
+            
+            //navigation
+            function goBack() {
+                window.webkit.messageHandlers.navigation.postMessage({method:"back"});
+            }
+            
+            
+            function asyncAlert(content) {
+                setTimeout(function(){
+                           alert(content);
+                           },1);
+            }
+            
+            //play
+            function play(result){
+                alert("play:"+result+"  has_register_appjs:"+has_register_appjs);
+            }
+            
+            
+                </script>
+            </head>
+    
+    <body>
+        <h1>这是按钮调用</h1>
+        <input type="button" value="扫一扫" onclick="scanClick()" />
+        <input type="button" value="获取定位" onclick="locationClick()" />
+        <input type="button" value="修改背景色" onclick="colorClick()" />
+        <input type="button" value="分享" onclick="shareClick()" />
+        <input type="button" value="支付" onclick="payClick()" />
+        <input type="button" value="返回" onclick="goBack()" />
+        
+        <a href="https://www.baidu.com">Baidu</a>
+        
+        <h1>这是文件上传</h1>
+        
+        <input type="file" />
+        
+        <h1>这是回调结果展示区</h1>
+        <textarea id ="returnValue" type="value" rows="5" cols="40">
+            
+        </textarea>
+        
+        <h4>竖直方向的表头：</h4>
+        <table border="1" style="width:90%;height:600px">
+            <tr>
+                <th>姓名</th>
+                <td>Bill Gates</td>
+            </tr>
+            <tr>
+                <th>电话</th>
+                <td>555 77 854</td>
+            </tr>
+            <tr>
+                <th>传真</th>
+                <td>555 77 855</td>
+            </tr>
+        </table>
+        
+        
+    </body>
+</html>
