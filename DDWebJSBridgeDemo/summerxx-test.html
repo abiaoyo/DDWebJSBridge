@@ -35,7 +35,7 @@
                 window.webkit.messageHandlers.testFunc.postMessage({method:'location',callback:"location_callback"});
             }
             function location_callback(result){
-                alert('alert(location:'+result+')');
+                document.getElementById("returnValue").value = 'location:'+result.longitude+','+result.latitude;
             }
             
             //color
@@ -73,6 +73,14 @@
                 window.webkit.messageHandlers.AntRouter.postMessage({method:"UserInfo"});
             }
             
+            //loginClick
+            function loginTokenClick(){
+                window.webkit.messageHandlers.AntRouter.postMessage({method:"loginToken",callback:"loginTokenResult",});
+            }
+            function loginTokenResult(result){
+                document.getElementById("returnValue").value = result.msg;
+            }
+            
             
                 </script>
             </head>
@@ -86,6 +94,7 @@
         <input type="button" value="支付" onclick="payClick()" />
         <input type="button" value="返回" onclick="goBack()" />
         <input type="button" value="AntRouter" onclick="antRouterClick()" />
+        <input type="button" value="LoginToken" onclick="loginTokenClick()" />
         
         <a href="https://www.baidu.com">Baidu</a>
         

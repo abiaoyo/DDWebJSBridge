@@ -100,7 +100,8 @@
     } method:@"scan" channel:@"testFunc"];
     
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
-        responseBlock(nil,@{@"city":@"北京"});
+        NSDictionary * location = [AntRouter.router callKey:@"app.location"].object;
+        responseBlock(nil,location);
     } method:@"location" channel:@"testFunc"];
 
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
@@ -115,10 +116,17 @@
     
     [self.jsBridge callJSMethod:@"play" params:@{@"id":@1001,@"title":@"音乐001",@"url":@"https://www.bdisss.com/v/ddd/asjfow01.mp4"}];
     
-    
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         [AntRouter.router callKey:@"UserInfo"];
     } method:@"UserInfo" channel:@"AntRouter"];
+    
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+        NSLog(@"正在登录..");
+        [AntRouter.router callKey:@"loginToken" params:params taskBlock:^(id  _Nullable data) {
+            NSString * loginToken = data[@"loginToken"];
+            responseBlock(nil,@{@"loginToken":loginToken,@"msg":@"登录成功!"});
+        }];
+    } method:@"loginToken" channel:@"AntRouter"];
         
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
 }
