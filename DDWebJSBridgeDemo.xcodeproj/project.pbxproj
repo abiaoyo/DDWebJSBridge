@@ -17,6 +17,9 @@
 		18A3FB212635476E00335AA0 /* DDWebJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3FB1F2635476E00335AA0 /* DDWebJSBridge.m */; };
 		18A3FB24263547BC00335AA0 /* summerxx-test.html in Resources */ = {isa = PBXBuildFile; fileRef = 18A3FB23263547BC00335AA0 /* summerxx-test.html */; };
 		18A3FB28263547C600335AA0 /* DDNewWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3FB27263547C600335AA0 /* DDNewWebViewController.m */; };
+		18A3FB38263562BB00335AA0 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3FB36263562BB00335AA0 /* UserInfoViewController.m */; };
+		18A3FB39263562BB00335AA0 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A3FB37263562BB00335AA0 /* UserInfoViewController.xib */; };
+		45936788F12326B00B42F0B6 /* libPods-DDWebJSBridgeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D043A045AA066ABDDD1AF4B /* libPods-DDWebJSBridgeDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,12 @@
 		18A3FB23263547BC00335AA0 /* summerxx-test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "summerxx-test.html"; sourceTree = "<group>"; };
 		18A3FB26263547C600335AA0 /* DDNewWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNewWebViewController.h; sourceTree = "<group>"; };
 		18A3FB27263547C600335AA0 /* DDNewWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNewWebViewController.m; sourceTree = "<group>"; };
+		18A3FB35263562BB00335AA0 /* UserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		18A3FB36263562BB00335AA0 /* UserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
+		18A3FB37263562BB00335AA0 /* UserInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		8D043A045AA066ABDDD1AF4B /* libPods-DDWebJSBridgeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDWebJSBridgeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4125AEBFE132DA0F8B0F1F1 /* Pods-DDWebJSBridgeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDWebJSBridgeDemo.release.xcconfig"; path = "Target Support Files/Pods-DDWebJSBridgeDemo/Pods-DDWebJSBridgeDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DF3D5FAA3C76EEC67D03C002 /* Pods-DDWebJSBridgeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDWebJSBridgeDemo.debug.xcconfig"; path = "Target Support Files/Pods-DDWebJSBridgeDemo/Pods-DDWebJSBridgeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45936788F12326B00B42F0B6 /* libPods-DDWebJSBridgeDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,8 @@
 				18A3FB1E2635476E00335AA0 /* DDWebJSBridge */,
 				18A3FADE2635474000335AA0 /* DDWebJSBridgeDemo */,
 				18A3FADD2635474000335AA0 /* Products */,
+				30125B507AE46A878E995DBC /* Pods */,
+				30B0940C7E4C263B2EE27A23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +91,9 @@
 				18A3FAE32635474000335AA0 /* SceneDelegate.m */,
 				18A3FAE52635474000335AA0 /* ViewController.h */,
 				18A3FAE62635474000335AA0 /* ViewController.m */,
+				18A3FB35263562BB00335AA0 /* UserInfoViewController.h */,
+				18A3FB36263562BB00335AA0 /* UserInfoViewController.m */,
+				18A3FB37263562BB00335AA0 /* UserInfoViewController.xib */,
 				18A3FAE82635474000335AA0 /* Main.storyboard */,
 				18A3FAEB2635474400335AA0 /* Assets.xcassets */,
 				18A3FAED2635474400335AA0 /* LaunchScreen.storyboard */,
@@ -97,6 +112,23 @@
 			path = DDWebJSBridge;
 			sourceTree = "<group>";
 		};
+		30125B507AE46A878E995DBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D5FAA3C76EEC67D03C002 /* Pods-DDWebJSBridgeDemo.debug.xcconfig */,
+				D4125AEBFE132DA0F8B0F1F1 /* Pods-DDWebJSBridgeDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		30B0940C7E4C263B2EE27A23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D043A045AA066ABDDD1AF4B /* libPods-DDWebJSBridgeDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,6 +136,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A3FAF52635474400335AA0 /* Build configuration list for PBXNativeTarget "DDWebJSBridgeDemo" */;
 			buildPhases = (
+				A7D7905D3168B021388F7DE7 /* [CP] Check Pods Manifest.lock */,
 				18A3FAD82635474000335AA0 /* Sources */,
 				18A3FAD92635474000335AA0 /* Frameworks */,
 				18A3FADA2635474000335AA0 /* Resources */,
@@ -155,12 +188,38 @@
 			files = (
 				18A3FAEF2635474400335AA0 /* LaunchScreen.storyboard in Resources */,
 				18A3FAEC2635474400335AA0 /* Assets.xcassets in Resources */,
+				18A3FB39263562BB00335AA0 /* UserInfoViewController.xib in Resources */,
 				18A3FAEA2635474000335AA0 /* Main.storyboard in Resources */,
 				18A3FB24263547BC00335AA0 /* summerxx-test.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7D7905D3168B021388F7DE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DDWebJSBridgeDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18A3FAD82635474000335AA0 /* Sources */ = {
@@ -172,6 +231,7 @@
 				18A3FB212635476E00335AA0 /* DDWebJSBridge.m in Sources */,
 				18A3FAF22635474400335AA0 /* main.m in Sources */,
 				18A3FB28263547C600335AA0 /* DDNewWebViewController.m in Sources */,
+				18A3FB38263562BB00335AA0 /* UserInfoViewController.m in Sources */,
 				18A3FAE42635474000335AA0 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +372,7 @@
 		};
 		18A3FAF62635474400335AA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF3D5FAA3C76EEC67D03C002 /* Pods-DDWebJSBridgeDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -331,6 +392,7 @@
 		};
 		18A3FAF72635474400335AA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4125AEBFE132DA0F8B0F1F1 /* Pods-DDWebJSBridgeDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

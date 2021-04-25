@@ -68,6 +68,11 @@
                 alert("play:"+result+"  has_register_appjs:"+has_register_appjs);
             }
             
+            //antrouter
+            function antRouterClick(){
+                window.webkit.messageHandlers.AntRouter.postMessage({method:"UserInfo"});
+            }
+            
             
                 </script>
             </head>
@@ -80,6 +85,7 @@
         <input type="button" value="分享" onclick="shareClick()" />
         <input type="button" value="支付" onclick="payClick()" />
         <input type="button" value="返回" onclick="goBack()" />
+        <input type="button" value="AntRouter" onclick="antRouterClick()" />
         
         <a href="https://www.baidu.com">Baidu</a>
         

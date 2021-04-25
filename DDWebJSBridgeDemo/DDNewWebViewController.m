@@ -7,6 +7,7 @@
 
 #import "DDNewWebViewController.h"
 #import "DDWebJSBridge.h"
+#import <AntRouter/AntRouter.h>
 
 @interface DDNewWebViewController ()<WKNavigationDelegate,WKUIDelegate>
 
@@ -36,10 +37,56 @@
     [self setupData];
     [self setupSubviews];
     
+    /**
+     协议组成：
+     channel: 频道， 一般是同一个，也可多个
+     
+     method: 方法
+     
+     callback: 回调，app处理method完成后，H5需要被调用的方法;
+     如果responseBlock中又重新指定了非nil的method方法，则callback不会被调用。
+     如：[self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params,
+            DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+            responseBlock(@"locationResult",@{@"city":@"earth"});
+        } method:@"location" channel:@"testFunc"];
+     
+     params: 参数
+     
+     html js 中可调用以下方法注册默认通道
+     window.onload = function(){
+         window.webkit.messageHandlers.ddwebjs.postMessage({method:'ddwebjs_reg_def_channel'});
+     }
+     //例：这里是调用app的 getUserInfo方法
+     function getUserInfoFromApp(){
+        window.webkit.messageHandlers.ioschannel.postMessage({method:'getUserInfo',callback:"refreshUserInfo",params:{userId:1234}});
+     }
+     */
+
+    /**
+     eg:
+     __weak typeof(self) weakself = self;
+     //打开日志
+     [DDWebJSBridge LogEnable];
+     
+     //创建jsBridge
+     self.jsBridge = [DDWebJSBridge bridgeForWebView:self.webView channels:@[@"ddwebview",@"navigation"]];
+     
+     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+         responseBlock(nil,@{@"suc":@1,@"msg":@"分享成功"});
+     } method:@"share"];
+     
+     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+         [weakself.navigationController popViewControllerAnimated:YES];
+     } method:@"back"];
+     
+     // app 调用 js: play方法
+     [self.jsBridge callJSMethod:@"play" params:@{@"id":@1001,@"title":@"音乐001",@"url":@"https://www.bdisss.com/v/ddd/asjfow01.mp4"}];
+     
+     [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+     */
+    
     __weak typeof(self) weakself = self;
-    
     [DDWebJSBridge LogEnable];
-    
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         [weakself.navigationController popViewControllerAnimated:YES];
     } method:@"back" channel:@"navigation"];
@@ -47,11 +94,11 @@
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         responseBlock(nil,@{@"suc":@1,@"msg":@"分享成功"});
     } method:@"share" channel:@"testFunc"];
-
+    
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         responseBlock(nil,@{@"code":@"xsIhdLA=AU+Ufe1nKW02"});
     } method:@"scan" channel:@"testFunc"];
-
+    
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         responseBlock(nil,@{@"city":@"北京"});
     } method:@"location" channel:@"testFunc"];
@@ -65,7 +112,13 @@
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         responseBlock(nil,@{@"msg":@"可以支付"});
     } method:@"pay" channel:@"testFunc"];
+    
     [self.jsBridge callJSMethod:@"play" params:@{@"id":@1001,@"title":@"音乐001",@"url":@"https://www.bdisss.com/v/ddd/asjfow01.mp4"}];
+    
+    
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+        [AntRouter.router callKey:@"UserInfo"];
+    } method:@"UserInfo" channel:@"AntRouter"];
         
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
 }
@@ -226,7 +279,7 @@
 
 - (DDWebJSBridge *)jsBridge{
     if(!_jsBridge){
-        _jsBridge = [DDWebJSBridge bridgeForWebView:self.webView channels:@[@"ddwebview",@"navigation",@"testFunc",@"govee"]];
+        _jsBridge = [DDWebJSBridge bridgeForWebView:self.webView channels:@[@"navigation",@"testFunc",@"AntRouter"]];
     }
     return _jsBridge;
 }
