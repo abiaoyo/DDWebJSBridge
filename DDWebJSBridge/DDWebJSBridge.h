@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 //js响应方法 - method是要调用的js方法，如果为nil，则默认调用传过来的callback
 typedef void (^DDWebJSBridgeResponseBlock)(NSString * _Nullable method,NSDictionary * params);
 //js处理方法 -
-typedef void (^DDWebJSBridgeHandlerBlock)(NSDictionary * body, NSDictionary * params,DDWebJSBridgeResponseBlock responseBlock);
+typedef void (^DDWebJSBridgeHandlerBlock)(NSDictionary * params,WKScriptMessage * message,DDWebJSBridgeResponseBlock responseBlock);
 
 
 @interface DDWebJSBridge : NSObject

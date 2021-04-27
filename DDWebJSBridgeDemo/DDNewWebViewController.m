@@ -87,40 +87,40 @@
     
     __weak typeof(self) weakself = self;
     [DDWebJSBridge LogEnable];
-    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         [weakself.navigationController popViewControllerAnimated:YES];
     } method:@"back" channel:@"navigation"];
 
-    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         responseBlock(nil,@{@"suc":@1,@"msg":@"分享成功"});
     } method:@"share" channel:@"testFunc"];
     
-    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         responseBlock(nil,@{@"code":@"xsIhdLA=AU+Ufe1nKW02"});
     } method:@"scan" channel:@"testFunc"];
     
-    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         NSDictionary * location = [AntRouter.router callKey:@"app.location"].object;
         responseBlock(nil,location);
     } method:@"location" channel:@"testFunc"];
 
-    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         NSArray<NSNumber *> * color = params[@"color"];
         UIColor * rgbColor = [UIColor colorWithRed:color[0].integerValue/255.0 green:color[1].integerValue/255.0 blue:color[2].integerValue/255.0 alpha:color[3].floatValue];
         weakself.navigationController.navigationBar.backgroundColor = rgbColor;
     } method:@"color" channel:@"testFunc"];
 
-    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         responseBlock(nil,@{@"msg":@"可以支付"});
     } method:@"pay" channel:@"testFunc"];
     
     [self.jsBridge callJSMethod:@"play" params:@{@"id":@1001,@"title":@"音乐001",@"url":@"https://www.bdisss.com/v/ddd/asjfow01.mp4"}];
     
-    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         [AntRouter.router callKey:@"UserInfo"];
     } method:@"UserInfo" channel:@"AntRouter"];
     
-    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+    [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         NSLog(@"正在登录..");
         [AntRouter.router callKey:@"loginToken" params:params taskBlock:^(id  _Nullable data) {
             NSString * loginToken = data[@"loginToken"];

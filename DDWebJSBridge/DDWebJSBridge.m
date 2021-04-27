@@ -120,7 +120,7 @@ typedef NS_ENUM(NSUInteger,DDWebJSPriority) {
         self.jsHandlerContainer = [NSMutableDictionary new];
         self.channels = [NSMutableArray arrayWithObjects:DefaultChannel,nil];
         __weak typeof(self) weakself = self;
-        [self registerJSHandler:^(NSDictionary * _Nonnull body, NSDictionary * _Nonnull params, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
+        [self registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
             weakself.hasRegisterAppJS = YES;
             responseBlock(nil,@{@"success":@1,@"message":@"ddwebjs register success"});
             [weakself runJsMessageQueue];
@@ -252,7 +252,7 @@ typedef NS_ENUM(NSUInteger,DDWebJSPriority) {
         DDWebJSBridgeHandlerBlock jsHandler = handlerContainer[method];
         if(jsHandler){
             __weak typeof(self) weakself = self;
-            jsHandler(body,params,^(NSString * method,NSDictionary * params){
+            jsHandler(params,message,^(NSString * method,NSDictionary * params){
                 if(method){
                     [weakself callJSMethod:method params:params];
                 }else{
