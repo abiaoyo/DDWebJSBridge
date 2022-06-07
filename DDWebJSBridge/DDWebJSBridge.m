@@ -286,6 +286,7 @@ typedef NS_ENUM(NSUInteger,DDWebJSPriority) {
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
     //如果html js没有主动调用channel:ddwebjs  method:ddwebjs_reg_def_channel，则hasRegisterAppJS为NO,则在didFinishNavigation这里手动打开一次
+//    self.hasRegisterAppJS = YES;
     self.didFinishNavigation = YES;
     [self runJsMessageQueue];
     if(self.navigationDelegate && [self.navigationDelegate respondsToSelector:@selector(webView:didFinishNavigation:)]){

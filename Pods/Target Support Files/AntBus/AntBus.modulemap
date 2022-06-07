@@ -1,0 +1,6 @@
+module AntBus {
+  umbrella header "AntBus-umbrella.h"
+
+  export *
+  module * { export * }
+}

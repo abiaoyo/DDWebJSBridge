@@ -1,16 +1,21 @@
 PODS:
-  - AntRouter (1.0)
+  - AntBus (1.3.3):
+    - AntBus/ForSwift (= 1.3.3)
+  - AntBus/ForOC (1.3.3):
+    - AntBus/ForSwift
+  - AntBus/ForSwift (1.3.3)
 
 DEPENDENCIES:
-  - AntRouter (~> 1.0)
+  - AntBus
+  - AntBus/ForOC
 
 SPEC REPOS:
   trunk:
-    - AntRouter
+    - AntBus
 
 SPEC CHECKSUMS:
-  AntRouter: 844902cf7bbfd9836ebe8ddd60b2adc3f804f05e
+  AntBus: fa3ce54c2860c0a4ebb117ad022a820c6fbc4d09
 
-PODFILE CHECKSUM: ca4e73da0becbef0cf3f7145e62a1f8e782f47b8
+PODFILE CHECKSUM: cb00c7c56a1fa503312b53db55d47ae72f113fbe
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3

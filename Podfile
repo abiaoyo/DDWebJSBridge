@@ -6,6 +6,8 @@ target 'DDWebJSBridgeDemo' do
   #use_frameworks!
 
   # Pods for DDWebJSBridgeDemo
-  pod 'AntRouter', '~> 1.0'
+#  pod 'AntRouter', '~> 1.0'
+  pod 'AntBus'
+  pod 'AntBus/ForOC'
 
 end

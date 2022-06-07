@@ -7,7 +7,7 @@
 
 #import "DDNewWebViewController.h"
 #import "DDWebJSBridge.h"
-#import <AntRouter/AntRouter.h>
+@import AntBus;
 
 @interface DDNewWebViewController ()<WKNavigationDelegate,WKUIDelegate>
 
@@ -84,9 +84,10 @@
      
      [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
      */
-    
     __weak typeof(self) weakself = self;
+    
     [DDWebJSBridge LogEnable];
+    
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         [weakself.navigationController popViewControllerAnimated:YES];
     } method:@"back" channel:@"navigation"];
@@ -100,8 +101,9 @@
     } method:@"scan" channel:@"testFunc"];
     
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
-        NSDictionary * location = [AntRouter.router callKey:@"app.location"].object;
-        responseBlock(nil,location);
+        [OCAntBus.callback callWithKey:@"app.location" data:nil responseHandler:^(id _Nullable data) {
+            responseBlock(nil, data);
+        }];
     } method:@"location" channel:@"testFunc"];
 
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
@@ -117,12 +119,14 @@
     [self.jsBridge callJSMethod:@"play" params:@{@"id":@1001,@"title":@"音乐001",@"url":@"https://www.bdisss.com/v/ddd/asjfow01.mp4"}];
     
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
-        [AntRouter.router callKey:@"UserInfo"];
+        [OCAntBus.callback callWithKey:@"UserInfo" data:nil responseHandler:^(id _Nullable data) {
+            
+        }];
     } method:@"UserInfo" channel:@"AntRouter"];
     
     [self.jsBridge registerJSHandler:^(NSDictionary * _Nonnull params, WKScriptMessage * _Nonnull message, DDWebJSBridgeResponseBlock  _Nonnull responseBlock) {
         NSLog(@"正在登录..");
-        [AntRouter.router callKey:@"loginToken" params:params taskBlock:^(id  _Nullable data) {
+        [OCAntBus.callback callWithKey:@"loginToken" data:params responseHandler:^(id _Nullable data) {
             NSString * loginToken = data[@"loginToken"];
             responseBlock(nil,@{@"loginToken":loginToken,@"msg":@"登录成功!"});
         }];

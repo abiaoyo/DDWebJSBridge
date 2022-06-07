@@ -7,48 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19B069527655BA97CAB8786478A5DCC6 /* AntRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AE6B560D60C25D4AD0B57722CEE2C /* AntRouter-dummy.m */; };
-		42294C25DC31B522B249C0285D3A9EAA /* AntRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A8A649B74926712DD65C0F600D0648D /* AntRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		625485521C27589D20AF6121004AF7F9 /* AntRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A855192215A40AD1CAA2A09E81A0C /* AntRouter.m */; };
-		9F6D4CEA732A5ABF39825B11AF6690B0 /* Pods-DDWebJSBridgeDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DCF8DC3DEC4CD9CAE5AC9E326A2F5F /* Pods-DDWebJSBridgeDemo-dummy.m */; };
+		119125B7772C09F60B19A5177455B768 /* AntBusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1142688417A7836B39F4330CE92B7D /* AntBusService.swift */; };
+		233BDA4FC3A26AAC316DD8D2B3C9F7DD /* AntBusListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7AB4DD50A114AD7CBB60E80FE17CB /* AntBusListener.swift */; };
+		23FB3F8E80EB0055C5CBA5F18138D460 /* AntBusNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EF2DC39CA42A316DE8177F9EA1A5E2 /* AntBusNotification.swift */; };
+		44D784C26E113892E4B5CA8428109F0A /* AntBus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DF48ACE158FD329369B07C3452E6B8 /* AntBus-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A0F9D290CF9D4568918B7C8BBA23215 /* OCAntBusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA242F6C05E1973F71DDFEF0BFA43DB /* OCAntBusData.swift */; };
+		7009160B5DB456EC8EB7FEA263450700 /* AntBus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2D6DC1F316ABA63D4408DB1C4E8B1 /* AntBus-dummy.m */; };
+		8E9D11AABE491E9E92EDC5A1B0F49C53 /* OCAntBusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC551E2DAE892C739798B56A82D102D1 /* OCAntBusService.swift */; };
+		92C37EF32FCB11ACA951E6527FBF468A /* Pods-DDWebJSBridgeDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD46952BD3ECA0229A0523DD660E943 /* Pods-DDWebJSBridgeDemo-dummy.m */; };
+		97883E612B6698B0AAFE84F82BC35272 /* OCAntBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A3DFAA8360B48F1F2ACAB69AC0E2E4 /* OCAntBus.swift */; };
+		A1AD50EB8069EC9AE5A92A75F32BB4EF /* OCAntBusCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB4F28BE804C627EA8858CF2216FD5 /* OCAntBusCallback.swift */; };
+		A37498CE00F758344592C0433A0F54F4 /* AntBusUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB77B5802EC42BED9AE2F8604144EE2C /* AntBusUtil.swift */; };
+		A91C2B27BAE34D7E043A97893D5AEBC8 /* OCAntBusDeallocHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C0057492A0A02DF0F659184C1EA069 /* OCAntBusDeallocHook.swift */; };
+		AA1E75683A2BD809CDEF05ECD7B63BF4 /* WeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37489CB0128E11F11EF6AC7934450160 /* WeakMapTable.swift */; };
+		AEE254E3AEFD625EEED523E8F147DA63 /* AntBusData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F7B72099510B03F857CD6D472F4DD /* AntBusData.swift */; };
+		B0DAB82C31D95BEE962875C6A2C1B032 /* AntBusDeallocHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD85403902794DD81DFA4577ADA5FC /* AntBusDeallocHook.swift */; };
+		BEB0F80DE54CC3AFCEB7194A4150141D /* Pods-DDWebJSBridgeDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86A3A7688E429AC9B7D6D70E1F673C28 /* Pods-DDWebJSBridgeDemo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C8DFA11A9B0DB311BB0C2BFF9B3A204C /* AntBusCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB17E33CC5EF43F507E144FFA8C4348F /* AntBusCallback.swift */; };
+		D09082422517848F311926A6A9EFA16B /* OCAntBusNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F03CE3E4E97A94083136D1E2F8CE0 /* OCAntBusNotification.swift */; };
+		D5933548D645B1DF93344A804E4CD394 /* AntBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC276850A0064FEAD08C9717876A33 /* AntBus.swift */; };
+		E5502681479EF2C04B2241E814BEA5C5 /* OCAntBusListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DAE01807DE965D17BA803461DA263C /* OCAntBusListener.swift */; };
+		E88AD2867BA514602129CCF0B3185C51 /* AntBusChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF16CCA80DD45C9DB0252DA591D4253 /* AntBusChannel.swift */; };
+		F0C594E9349751D593800D36E2B623A2 /* OCAntBusChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3500A2D01F0B1C1308A3797D42F6C6 /* OCAntBusChannel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		01F0E08F2D64FC52456BECBCA7C8A0D0 /* PBXContainerItemProxy */ = {
+		E910D2700D76D0B4339C775A5578BD61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2CA834B09DF44517DEFCF2D5DC4DA499;
-			remoteInfo = AntRouter;
+			remoteGlobalIDString = 352B366B4076D649FC859124AA0AAF4D;
+			remoteInfo = AntBus;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1002ADA9082B92499988F6A529D497D7 /* AntRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AntRouter-prefix.pch"; sourceTree = "<group>"; };
-		20F6C08182E532AA61E9CBD318AC288D /* libPods-DDWebJSBridgeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-DDWebJSBridgeDemo.a"; path = "libPods-DDWebJSBridgeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A0F62EB14D5C07750E3507B292F3409 /* Pods-DDWebJSBridgeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDWebJSBridgeDemo.release.xcconfig"; sourceTree = "<group>"; };
-		3B4AE6B560D60C25D4AD0B57722CEE2C /* AntRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AntRouter-dummy.m"; sourceTree = "<group>"; };
-		3C53597DC1E1391D4D986E4A787C1E7A /* libAntRouter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAntRouter.a; path = libAntRouter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E9C599B860E10E992E2D85F59AB8001 /* AntRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AntRouter.release.xcconfig; sourceTree = "<group>"; };
-		4A8A649B74926712DD65C0F600D0648D /* AntRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AntRouter.h; path = AntRouter/Classes/AntRouter.h; sourceTree = "<group>"; };
-		74690DAC0B67ADC4FEE5C883013BB8FC /* Pods-DDWebJSBridgeDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DDWebJSBridgeDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		864288808AE5166E050E99102E673EC8 /* AntRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AntRouter.debug.xcconfig; sourceTree = "<group>"; };
-		95A2E2650DC019756CA53CEFBBA26062 /* Pods-DDWebJSBridgeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDWebJSBridgeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		1A2E4F13E2CC5B4DB340F01E6D611320 /* AntBus */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = AntBus; path = libAntBus.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA242F6C05E1973F71DDFEF0BFA43DB /* OCAntBusData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAntBusData.swift; path = AntBus/AntBus/Classes/ForOC/OCAntBusData.swift; sourceTree = "<group>"; };
+		20F6C08182E532AA61E9CBD318AC288D /* Pods-DDWebJSBridgeDemo */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-DDWebJSBridgeDemo"; path = "libPods-DDWebJSBridgeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24DF48ACE158FD329369B07C3452E6B8 /* AntBus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AntBus-umbrella.h"; sourceTree = "<group>"; };
+		37489CB0128E11F11EF6AC7934450160 /* WeakMapTable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakMapTable.swift; path = AntBus/AntBus/Classes/ForSwift/WeakMapTable.swift; sourceTree = "<group>"; };
+		386E45ED0698B323FEC7C8E52C82A631 /* Pods-DDWebJSBridgeDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DDWebJSBridgeDemo.modulemap"; sourceTree = "<group>"; };
+		3BF7AB4DD50A114AD7CBB60E80FE17CB /* AntBusListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AntBusListener.swift; path = AntBus/AntBus/Classes/ForSwift/AntBusListener.swift; sourceTree = "<group>"; };
+		3C1F7B72099510B03F857CD6D472F4DD /* AntBusData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AntBusData.swift; path = AntBus/AntBus/Classes/ForSwift/AntBusData.swift; sourceTree = "<group>"; };
+		3C8F03CE3E4E97A94083136D1E2F8CE0 /* OCAntBusNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAntBusNotification.swift; path = AntBus/AntBus/Classes/ForOC/OCAntBusNotification.swift; sourceTree = "<group>"; };
+		3CF2D6DC1F316ABA63D4408DB1C4E8B1 /* AntBus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AntBus-dummy.m"; sourceTree = "<group>"; };
+		3FF16CCA80DD45C9DB0252DA591D4253 /* AntBusChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AntBusChannel.swift; path = AntBus/AntBus/Classes/ForSwift/AntBusChannel.swift; sourceTree = "<group>"; };
+		42DAE01807DE965D17BA803461DA263C /* OCAntBusListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAntBusListener.swift; path = AntBus/AntBus/Classes/ForOC/OCAntBusListener.swift; sourceTree = "<group>"; };
+		43C7CCE8832845E0AECABD9F310E0F41 /* AntBus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AntBus-prefix.pch"; sourceTree = "<group>"; };
+		44EF2DC39CA42A316DE8177F9EA1A5E2 /* AntBusNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AntBusNotification.swift; path = AntBus/AntBus/Classes/ForSwift/AntBusNotification.swift; sourceTree = "<group>"; };
+		52EE330C148911D3D52BF779ED91BD93 /* Pods-DDWebJSBridgeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDWebJSBridgeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5F1142688417A7836B39F4330CE92B7D /* AntBusService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AntBusService.swift; path = AntBus/AntBus/Classes/ForSwift/AntBusService.swift; sourceTree = "<group>"; };
+		6A2700BA8A4CADE712D741B3B776C773 /* Pods-DDWebJSBridgeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDWebJSBridgeDemo.release.xcconfig"; sourceTree = "<group>"; };
+		7BD46952BD3ECA0229A0523DD660E943 /* Pods-DDWebJSBridgeDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DDWebJSBridgeDemo-dummy.m"; sourceTree = "<group>"; };
+		806BB27D5C95BAF4F0C02087F96AA490 /* AntBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AntBus.release.xcconfig; sourceTree = "<group>"; };
+		86A3A7688E429AC9B7D6D70E1F673C28 /* Pods-DDWebJSBridgeDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DDWebJSBridgeDemo-umbrella.h"; sourceTree = "<group>"; };
+		86C0057492A0A02DF0F659184C1EA069 /* OCAntBusDeallocHook.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAntBusDeallocHook.swift; path = AntBus/AntBus/Classes/ForOC/OCAntBusDeallocHook.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CA2A855192215A40AD1CAA2A09E81A0C /* AntRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AntRouter.m; path = AntRouter/Classes/AntRouter.m; sourceTree = "<group>"; };
-		D6DCF8DC3DEC4CD9CAE5AC9E326A2F5F /* Pods-DDWebJSBridgeDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DDWebJSBridgeDemo-dummy.m"; sourceTree = "<group>"; };
-		DAB2F5EB0A6FC887880ED76A769DFB53 /* Pods-DDWebJSBridgeDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DDWebJSBridgeDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		A3062D16A8EDA881E3AF2F40D02D8AF2 /* AntBus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AntBus.modulemap; sourceTree = "<group>"; };
+		A4C9F6B6506929CB50FFFC9CE10EDDF0 /* Pods-DDWebJSBridgeDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DDWebJSBridgeDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AB17E33CC5EF43F507E144FFA8C4348F /* AntBusCallback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AntBusCallback.swift; path = AntBus/AntBus/Classes/ForSwift/AntBusCallback.swift; sourceTree = "<group>"; };
+		AB3500A2D01F0B1C1308A3797D42F6C6 /* OCAntBusChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAntBusChannel.swift; path = AntBus/AntBus/Classes/ForOC/OCAntBusChannel.swift; sourceTree = "<group>"; };
+		AC551E2DAE892C739798B56A82D102D1 /* OCAntBusService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAntBusService.swift; path = AntBus/AntBus/Classes/ForOC/OCAntBusService.swift; sourceTree = "<group>"; };
+		B21D4754CDCF8FD4DD4C17651CDAEB7F /* Pods-DDWebJSBridgeDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DDWebJSBridgeDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		BADB4F28BE804C627EA8858CF2216FD5 /* OCAntBusCallback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAntBusCallback.swift; path = AntBus/AntBus/Classes/ForOC/OCAntBusCallback.swift; sourceTree = "<group>"; };
+		BEAD85403902794DD81DFA4577ADA5FC /* AntBusDeallocHook.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AntBusDeallocHook.swift; path = AntBus/AntBus/Classes/ForSwift/AntBusDeallocHook.swift; sourceTree = "<group>"; };
+		C06540A5441FF735B5F654005D2CDA4D /* AntBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AntBus.debug.xcconfig; sourceTree = "<group>"; };
+		E5A3DFAA8360B48F1F2ACAB69AC0E2E4 /* OCAntBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAntBus.swift; path = AntBus/AntBus/Classes/ForOC/OCAntBus.swift; sourceTree = "<group>"; };
+		EACC276850A0064FEAD08C9717876A33 /* AntBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AntBus.swift; path = AntBus/AntBus/Classes/ForSwift/AntBus.swift; sourceTree = "<group>"; };
+		EB77B5802EC42BED9AE2F8604144EE2C /* AntBusUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AntBusUtil.swift; path = AntBus/AntBus/Classes/ForSwift/AntBusUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AC450C39B2CE235001E071EB3B5E096D /* Frameworks */ = {
+		AE251902543B566D7D10F9E695F5D938 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD61E7F2BE4F6B3DAB3C8C97602D3BAF /* Frameworks */ = {
+		E7ABBC7EC90C2FFB6B3761F8D4B7830C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,46 +96,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		768045FDAB3951DA0D115622E7429693 /* Products */ = {
+		0A9147F12BC0FAC6D24D8B2AFFDF2DF5 /* Pods-DDWebJSBridgeDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3C53597DC1E1391D4D986E4A787C1E7A /* libAntRouter.a */,
-				20F6C08182E532AA61E9CBD318AC288D /* libPods-DDWebJSBridgeDemo.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7D2AFCE82779068DE5A2763850B033EF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E460B689B25503958389EEA2C045AE0A /* AntRouter */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		9F21112D12992CD0BE5365C7AB62123E /* Pods-DDWebJSBridgeDemo */ = {
-			isa = PBXGroup;
-			children = (
-				74690DAC0B67ADC4FEE5C883013BB8FC /* Pods-DDWebJSBridgeDemo-acknowledgements.markdown */,
-				DAB2F5EB0A6FC887880ED76A769DFB53 /* Pods-DDWebJSBridgeDemo-acknowledgements.plist */,
-				D6DCF8DC3DEC4CD9CAE5AC9E326A2F5F /* Pods-DDWebJSBridgeDemo-dummy.m */,
-				95A2E2650DC019756CA53CEFBBA26062 /* Pods-DDWebJSBridgeDemo.debug.xcconfig */,
-				2A0F62EB14D5C07750E3507B292F3409 /* Pods-DDWebJSBridgeDemo.release.xcconfig */,
+				386E45ED0698B323FEC7C8E52C82A631 /* Pods-DDWebJSBridgeDemo.modulemap */,
+				A4C9F6B6506929CB50FFFC9CE10EDDF0 /* Pods-DDWebJSBridgeDemo-acknowledgements.markdown */,
+				B21D4754CDCF8FD4DD4C17651CDAEB7F /* Pods-DDWebJSBridgeDemo-acknowledgements.plist */,
+				7BD46952BD3ECA0229A0523DD660E943 /* Pods-DDWebJSBridgeDemo-dummy.m */,
+				86A3A7688E429AC9B7D6D70E1F673C28 /* Pods-DDWebJSBridgeDemo-umbrella.h */,
+				52EE330C148911D3D52BF779ED91BD93 /* Pods-DDWebJSBridgeDemo.debug.xcconfig */,
+				6A2700BA8A4CADE712D741B3B776C773 /* Pods-DDWebJSBridgeDemo.release.xcconfig */,
 			);
 			name = "Pods-DDWebJSBridgeDemo";
 			path = "Target Support Files/Pods-DDWebJSBridgeDemo";
 			sourceTree = "<group>";
 		};
-		C5681BCE0C83098455D6310F0F560791 /* Support Files */ = {
+		18A00639EFD5F9B2649A70B45387A1F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B4AE6B560D60C25D4AD0B57722CEE2C /* AntRouter-dummy.m */,
-				1002ADA9082B92499988F6A529D497D7 /* AntRouter-prefix.pch */,
-				864288808AE5166E050E99102E673EC8 /* AntRouter.debug.xcconfig */,
-				3E9C599B860E10E992E2D85F59AB8001 /* AntRouter.release.xcconfig */,
+				1A2E4F13E2CC5B4DB340F01E6D611320 /* AntBus */,
+				20F6C08182E532AA61E9CBD318AC288D /* Pods-DDWebJSBridgeDemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62C8A67CE4A02FDC7C7CEC378E29FFE7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3062D16A8EDA881E3AF2F40D02D8AF2 /* AntBus.modulemap */,
+				3CF2D6DC1F316ABA63D4408DB1C4E8B1 /* AntBus-dummy.m */,
+				43C7CCE8832845E0AECABD9F310E0F41 /* AntBus-prefix.pch */,
+				24DF48ACE158FD329369B07C3452E6B8 /* AntBus-umbrella.h */,
+				C06540A5441FF735B5F654005D2CDA4D /* AntBus.debug.xcconfig */,
+				806BB27D5C95BAF4F0C02087F96AA490 /* AntBus.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/AntRouter";
+			path = "../Target Support Files/AntBus";
+			sourceTree = "<group>";
+		};
+		6FFA777D07576455A870F2C9C7325AC3 /* AntBus */ = {
+			isa = PBXGroup;
+			children = (
+				7279F173A3166830C7BF54D18990C263 /* ForOC */,
+				D82D4F7C11A52D7780DEFCEE9C7EEE0B /* ForSwift */,
+				62C8A67CE4A02FDC7C7CEC378E29FFE7 /* Support Files */,
+			);
+			name = AntBus;
+			path = AntBus;
+			sourceTree = "<group>";
+		};
+		7279F173A3166830C7BF54D18990C263 /* ForOC */ = {
+			isa = PBXGroup;
+			children = (
+				E5A3DFAA8360B48F1F2ACAB69AC0E2E4 /* OCAntBus.swift */,
+				BADB4F28BE804C627EA8858CF2216FD5 /* OCAntBusCallback.swift */,
+				AB3500A2D01F0B1C1308A3797D42F6C6 /* OCAntBusChannel.swift */,
+				1EA242F6C05E1973F71DDFEF0BFA43DB /* OCAntBusData.swift */,
+				86C0057492A0A02DF0F659184C1EA069 /* OCAntBusDeallocHook.swift */,
+				42DAE01807DE965D17BA803461DA263C /* OCAntBusListener.swift */,
+				3C8F03CE3E4E97A94083136D1E2F8CE0 /* OCAntBusNotification.swift */,
+				AC551E2DAE892C739798B56A82D102D1 /* OCAntBusService.swift */,
+			);
+			name = ForOC;
+			sourceTree = "<group>";
+		};
+		81D4D216AF5C4A4CA97B96E7A98C3750 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FFA777D07576455A870F2C9C7325AC3 /* AntBus */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -105,10 +173,27 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				7D2AFCE82779068DE5A2763850B033EF /* Pods */,
-				768045FDAB3951DA0D115622E7429693 /* Products */,
-				F19BC04F3E8FD40A6BDD416BD4617CD3 /* Targets Support Files */,
+				81D4D216AF5C4A4CA97B96E7A98C3750 /* Pods */,
+				18A00639EFD5F9B2649A70B45387A1F1 /* Products */,
+				FF389F6925935A6FE96143CB5DD3C7AA /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D82D4F7C11A52D7780DEFCEE9C7EEE0B /* ForSwift */ = {
+			isa = PBXGroup;
+			children = (
+				EACC276850A0064FEAD08C9717876A33 /* AntBus.swift */,
+				AB17E33CC5EF43F507E144FFA8C4348F /* AntBusCallback.swift */,
+				3FF16CCA80DD45C9DB0252DA591D4253 /* AntBusChannel.swift */,
+				3C1F7B72099510B03F857CD6D472F4DD /* AntBusData.swift */,
+				BEAD85403902794DD81DFA4577ADA5FC /* AntBusDeallocHook.swift */,
+				3BF7AB4DD50A114AD7CBB60E80FE17CB /* AntBusListener.swift */,
+				44EF2DC39CA42A316DE8177F9EA1A5E2 /* AntBusNotification.swift */,
+				5F1142688417A7836B39F4330CE92B7D /* AntBusService.swift */,
+				EB77B5802EC42BED9AE2F8604144EE2C /* AntBusUtil.swift */,
+				37489CB0128E11F11EF6AC7934450160 /* WeakMapTable.swift */,
+			);
+			name = ForSwift;
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -118,21 +203,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E460B689B25503958389EEA2C045AE0A /* AntRouter */ = {
+		FF389F6925935A6FE96143CB5DD3C7AA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4A8A649B74926712DD65C0F600D0648D /* AntRouter.h */,
-				CA2A855192215A40AD1CAA2A09E81A0C /* AntRouter.m */,
-				C5681BCE0C83098455D6310F0F560791 /* Support Files */,
-			);
-			name = AntRouter;
-			path = AntRouter;
-			sourceTree = "<group>";
-		};
-		F19BC04F3E8FD40A6BDD416BD4617CD3 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9F21112D12992CD0BE5365C7AB62123E /* Pods-DDWebJSBridgeDemo */,
+				0A9147F12BC0FAC6D24D8B2AFFDF2DF5 /* Pods-DDWebJSBridgeDemo */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -140,18 +214,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7895F71EB8C7565D2AAB2D0185A7CE44 /* Headers */ = {
+		A1C7269B8B1150D07073697910DE1BA6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D784C26E113892E4B5CA8428109F0A /* AntBus-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BED6BCF302B6622C836EDB021084F699 /* Headers */ = {
+		C292DEBC237CB1D483636861301899AF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42294C25DC31B522B249C0285D3A9EAA /* AntRouter.h in Headers */,
+				BEB0F80DE54CC3AFCEB7194A4150141D /* Pods-DDWebJSBridgeDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,37 +235,38 @@
 /* Begin PBXNativeTarget section */
 		1A75B650CF281DA5CF0FBB249FC95F3D /* Pods-DDWebJSBridgeDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12885C44A7210EA69D177159505DE0A7 /* Build configuration list for PBXNativeTarget "Pods-DDWebJSBridgeDemo" */;
+			buildConfigurationList = E0E633FA8595B614CB179B01CED121C4 /* Build configuration list for PBXNativeTarget "Pods-DDWebJSBridgeDemo" */;
 			buildPhases = (
-				7895F71EB8C7565D2AAB2D0185A7CE44 /* Headers */,
-				C92E96CC6213E486738C205F96D71574 /* Sources */,
-				FD61E7F2BE4F6B3DAB3C8C97602D3BAF /* Frameworks */,
+				C292DEBC237CB1D483636861301899AF /* Headers */,
+				E1A5E8E618274A1B1A59DF845059CBCB /* Sources */,
+				AE251902543B566D7D10F9E695F5D938 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0A90C166C12224F9119CDE362D67C665 /* PBXTargetDependency */,
+				7CBDBBB2C942206015AF1E898C67383B /* PBXTargetDependency */,
 			);
 			name = "Pods-DDWebJSBridgeDemo";
 			productName = "Pods-DDWebJSBridgeDemo";
-			productReference = 20F6C08182E532AA61E9CBD318AC288D /* libPods-DDWebJSBridgeDemo.a */;
+			productReference = 20F6C08182E532AA61E9CBD318AC288D /* Pods-DDWebJSBridgeDemo */;
 			productType = "com.apple.product-type.library.static";
 		};
-		2CA834B09DF44517DEFCF2D5DC4DA499 /* AntRouter */ = {
+		352B366B4076D649FC859124AA0AAF4D /* AntBus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92AFCF2CC1D3C832E6421F192E82D43A /* Build configuration list for PBXNativeTarget "AntRouter" */;
+			buildConfigurationList = 6326E91EC4F9D7FFE1383626477F01B8 /* Build configuration list for PBXNativeTarget "AntBus" */;
 			buildPhases = (
-				BED6BCF302B6622C836EDB021084F699 /* Headers */,
-				BEC6D15784CFCB677EBB48178504CD0C /* Sources */,
-				AC450C39B2CE235001E071EB3B5E096D /* Frameworks */,
+				A1C7269B8B1150D07073697910DE1BA6 /* Headers */,
+				B18B914653E198DC4B2015FCB5C3C988 /* Sources */,
+				E7ABBC7EC90C2FFB6B3761F8D4B7830C /* Frameworks */,
+				10C76C43106F44A3281F6858BA4743C9 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AntRouter;
-			productName = AntRouter;
-			productReference = 3C53597DC1E1391D4D986E4A787C1E7A /* libAntRouter.a */;
+			name = AntBus;
+			productName = AntBus;
+			productReference = 1A2E4F13E2CC5B4DB340F01E6D611320 /* AntBus */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -199,106 +275,130 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 768045FDAB3951DA0D115622E7429693 /* Products */;
+			productRefGroup = 18A00639EFD5F9B2649A70B45387A1F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CA834B09DF44517DEFCF2D5DC4DA499 /* AntRouter */,
+				352B366B4076D649FC859124AA0AAF4D /* AntBus */,
 				1A75B650CF281DA5CF0FBB249FC95F3D /* Pods-DDWebJSBridgeDemo */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10C76C43106F44A3281F6858BA4743C9 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/AntBus/AntBus.modulemap",
+				"${PODS_ROOT}/Headers/Public/AntBus/AntBus-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/AntBus-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/AntBus/AntBus.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/AntBus/AntBus-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		BEC6D15784CFCB677EBB48178504CD0C /* Sources */ = {
+		B18B914653E198DC4B2015FCB5C3C988 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B069527655BA97CAB8786478A5DCC6 /* AntRouter-dummy.m in Sources */,
-				625485521C27589D20AF6121004AF7F9 /* AntRouter.m in Sources */,
+				D5933548D645B1DF93344A804E4CD394 /* AntBus.swift in Sources */,
+				7009160B5DB456EC8EB7FEA263450700 /* AntBus-dummy.m in Sources */,
+				C8DFA11A9B0DB311BB0C2BFF9B3A204C /* AntBusCallback.swift in Sources */,
+				E88AD2867BA514602129CCF0B3185C51 /* AntBusChannel.swift in Sources */,
+				AEE254E3AEFD625EEED523E8F147DA63 /* AntBusData.swift in Sources */,
+				B0DAB82C31D95BEE962875C6A2C1B032 /* AntBusDeallocHook.swift in Sources */,
+				233BDA4FC3A26AAC316DD8D2B3C9F7DD /* AntBusListener.swift in Sources */,
+				23FB3F8E80EB0055C5CBA5F18138D460 /* AntBusNotification.swift in Sources */,
+				119125B7772C09F60B19A5177455B768 /* AntBusService.swift in Sources */,
+				A37498CE00F758344592C0433A0F54F4 /* AntBusUtil.swift in Sources */,
+				97883E612B6698B0AAFE84F82BC35272 /* OCAntBus.swift in Sources */,
+				A1AD50EB8069EC9AE5A92A75F32BB4EF /* OCAntBusCallback.swift in Sources */,
+				F0C594E9349751D593800D36E2B623A2 /* OCAntBusChannel.swift in Sources */,
+				5A0F9D290CF9D4568918B7C8BBA23215 /* OCAntBusData.swift in Sources */,
+				A91C2B27BAE34D7E043A97893D5AEBC8 /* OCAntBusDeallocHook.swift in Sources */,
+				E5502681479EF2C04B2241E814BEA5C5 /* OCAntBusListener.swift in Sources */,
+				D09082422517848F311926A6A9EFA16B /* OCAntBusNotification.swift in Sources */,
+				8E9D11AABE491E9E92EDC5A1B0F49C53 /* OCAntBusService.swift in Sources */,
+				AA1E75683A2BD809CDEF05ECD7B63BF4 /* WeakMapTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C92E96CC6213E486738C205F96D71574 /* Sources */ = {
+		E1A5E8E618274A1B1A59DF845059CBCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F6D4CEA732A5ABF39825B11AF6690B0 /* Pods-DDWebJSBridgeDemo-dummy.m in Sources */,
+				92C37EF32FCB11ACA951E6527FBF468A /* Pods-DDWebJSBridgeDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0A90C166C12224F9119CDE362D67C665 /* PBXTargetDependency */ = {
+		7CBDBBB2C942206015AF1E898C67383B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = AntRouter;
-			target = 2CA834B09DF44517DEFCF2D5DC4DA499 /* AntRouter */;
-			targetProxy = 01F0E08F2D64FC52456BECBCA7C8A0D0 /* PBXContainerItemProxy */;
+			name = AntBus;
+			target = 352B366B4076D649FC859124AA0AAF4D /* AntBus */;
+			targetProxy = E910D2700D76D0B4339C775A5578BD61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		144BD6871E51AF3A482CFA6E276850C0 /* Release */ = {
+		2859BA9CD3C0AC1A681A71D56900883B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A0F62EB14D5C07750E3507B292F3409 /* Pods-DDWebJSBridgeDemo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		253191F48EEBABA5B11BBD6EE070B812 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E9C599B860E10E992E2D85F59AB8001 /* AntRouter.release.xcconfig */;
+			baseConfigurationReference = 806BB27D5C95BAF4F0C02087F96AA490 /* AntBus.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/AntRouter/AntRouter-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AntBus/AntBus-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/AntBus/AntBus.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AntRouter;
-				PRODUCT_NAME = AntRouter;
+				PRODUCT_MODULE_NAME = AntBus;
+				PRODUCT_NAME = AntBus;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		793B8C01D45E79204AB72B91B147A60F /* Debug */ = {
+		302B1D6DD4B0379995856F183D1CC795 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95A2E2650DC019756CA53CEFBBA26062 /* Pods-DDWebJSBridgeDemo.debug.xcconfig */;
+			baseConfigurationReference = 52EE330C148911D3D52BF779ED91BD93 /* Pods-DDWebJSBridgeDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -307,6 +407,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDWebJSBridgeDemo/Pods-DDWebJSBridgeDemo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -316,6 +417,29 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		46C0BA2001127F4FBE27DE7EFDC94CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A2700BA8A4CADE712D741B3B776C773 /* Pods-DDWebJSBridgeDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDWebJSBridgeDemo/Pods-DDWebJSBridgeDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -445,24 +569,26 @@
 			};
 			name = Release;
 		};
-		E3112E9AF053F30BC725F3D1F6E02C8E /* Debug */ = {
+		D75A53687C6960EB5D35944FE95B9A74 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 864288808AE5166E050E99102E673EC8 /* AntRouter.debug.xcconfig */;
+			baseConfigurationReference = C06540A5441FF735B5F654005D2CDA4D /* AntBus.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/AntRouter/AntRouter-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AntBus/AntBus-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/AntBus/AntBus.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AntRouter;
-				PRODUCT_NAME = AntRouter;
+				PRODUCT_MODULE_NAME = AntBus;
+				PRODUCT_NAME = AntBus;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -470,15 +596,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12885C44A7210EA69D177159505DE0A7 /* Build configuration list for PBXNativeTarget "Pods-DDWebJSBridgeDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				793B8C01D45E79204AB72B91B147A60F /* Debug */,
-				144BD6871E51AF3A482CFA6E276850C0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -488,11 +605,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92AFCF2CC1D3C832E6421F192E82D43A /* Build configuration list for PBXNativeTarget "AntRouter" */ = {
+		6326E91EC4F9D7FFE1383626477F01B8 /* Build configuration list for PBXNativeTarget "AntBus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E3112E9AF053F30BC725F3D1F6E02C8E /* Debug */,
-				253191F48EEBABA5B11BBD6EE070B812 /* Release */,
+				D75A53687C6960EB5D35944FE95B9A74 /* Debug */,
+				2859BA9CD3C0AC1A681A71D56900883B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0E633FA8595B614CB179B01CED121C4 /* Build configuration list for PBXNativeTarget "Pods-DDWebJSBridgeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				302B1D6DD4B0379995856F183D1CC795 /* Debug */,
+				46C0BA2001127F4FBE27DE7EFDC94CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
