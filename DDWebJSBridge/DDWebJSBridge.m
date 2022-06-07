@@ -231,7 +231,7 @@ typedef NS_ENUM(NSUInteger,DDWebJSPriority) {
     }
 }
 
-//MARK:WKScriptMessageHandler
+/// MARK: - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
     
     NSString * channel = message.name;
@@ -302,7 +302,7 @@ typedef NS_ENUM(NSUInteger,DDWebJSPriority) {
     }
 }
 
-//MARK:RUNTIME
+/// MARK: RUNTIME
 - (void)forwardInvocation:(NSInvocation *)anInvocation{
     if (self.navigationDelegate && [self.navigationDelegate respondsToSelector:[anInvocation selector]]){
         [anInvocation invokeWithTarget:self.navigationDelegate];
